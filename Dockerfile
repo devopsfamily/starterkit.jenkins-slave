@@ -13,6 +13,7 @@ RUN apt-get update && \
     apt-key fingerprint 0EBFCD88 && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable" && \
+    apt-add-repository ppa:ansible/ansible  && \
     apt-get update && \
-    apt-get install -qq -y --no-install-recommends docker-ce && \
+    apt-get install -qq -y --no-install-recommends docker-ce ansible && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
